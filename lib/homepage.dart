@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hella/custom%20widgets/buttons.dart';
 
+import 'custom widgets/userrow.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -141,7 +143,62 @@ class _HomePageState extends State<HomePage> {
         SizedBox(
           height: 25,
         ),
+        UserRow(
+          name: 'John Dee',
+          phoneNumber: '0793997938',
+          location: 'Mbale',
+          photoUrl: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fclose-up-happy-brunette-girl-white-t-shirt-laughing-smiling-carefree-camera_1258-19129.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fsmiling-woman&tbnid=jMfDYODGEri82M&vet=12ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg..i&docid=PakbRk4DYhwL8M&w=626&h=417&q=smiling%20woman&client=opera&ved=2ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg',
+        ),
+        UserRow(
+          name: 'John Dee',
+          phoneNumber: '0793997938',
+          location: 'Mbale',
+          photoUrl: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fclose-up-happy-brunette-girl-white-t-shirt-laughing-smiling-carefree-camera_1258-19129.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fsmiling-woman&tbnid=jMfDYODGEri82M&vet=12ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg..i&docid=PakbRk4DYhwL8M&w=626&h=417&q=smiling%20woman&client=opera&ved=2ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg',
+        ),
+        UserRow(
+          name: 'John Dee',
+          phoneNumber: '0793997938',
+          location: 'Mbale',
+          photoUrl: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fclose-up-happy-brunette-girl-white-t-shirt-laughing-smiling-carefree-camera_1258-19129.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fsmiling-woman&tbnid=jMfDYODGEri82M&vet=12ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg..i&docid=PakbRk4DYhwL8M&w=626&h=417&q=smiling%20woman&client=opera&ved=2ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg',
+        ),
+        UserRow(
+          name: 'John Dee',
+          phoneNumber: '0793997938',
+          location: 'Mbale',
+          photoUrl: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fclose-up-happy-brunette-girl-white-t-shirt-laughing-smiling-carefree-camera_1258-19129.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fsmiling-woman&tbnid=jMfDYODGEri82M&vet=12ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg..i&docid=PakbRk4DYhwL8M&w=626&h=417&q=smiling%20woman&client=opera&ved=2ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg',
+        ),
+        UserRow(
+          name: 'John Dee',
+          phoneNumber: '0793997938',
+          location: 'Mbale',
+          photoUrl: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fclose-up-happy-brunette-girl-white-t-shirt-laughing-smiling-carefree-camera_1258-19129.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fsmiling-woman&tbnid=jMfDYODGEri82M&vet=12ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg..i&docid=PakbRk4DYhwL8M&w=626&h=417&q=smiling%20woman&client=opera&ved=2ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg',
+        ),
+        UserRow(
+          name: 'John Dee',
+          phoneNumber: '0793997938',
+          location: 'Mbale',
+          photoUrl: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fclose-up-happy-brunette-girl-white-t-shirt-laughing-smiling-carefree-camera_1258-19129.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fsmiling-woman&tbnid=jMfDYODGEri82M&vet=12ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg..i&docid=PakbRk4DYhwL8M&w=626&h=417&q=smiling%20woman&client=opera&ved=2ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg',
+        ),
+        UserRow(
+          name: 'John Dee',
+          phoneNumber: '0793997938',
+          location: 'Mbale',
+          photoUrl: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fclose-up-happy-brunette-girl-white-t-shirt-laughing-smiling-carefree-camera_1258-19129.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fsmiling-woman&tbnid=jMfDYODGEri82M&vet=12ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg..i&docid=PakbRk4DYhwL8M&w=626&h=417&q=smiling%20woman&client=opera&ved=2ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg',
+        ),
+        UserRow(
+          name: 'John Dee',
+          phoneNumber: '0793997938',
+          location: 'Mbale',
+          photoUrl: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fclose-up-happy-brunette-girl-white-t-shirt-laughing-smiling-carefree-camera_1258-19129.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fsmiling-woman&tbnid=jMfDYODGEri82M&vet=12ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg..i&docid=PakbRk4DYhwL8M&w=626&h=417&q=smiling%20woman&client=opera&ved=2ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg',
+        ),
+        UserRow(
+          name: 'John Dee',
+          phoneNumber: '0793997938',
+          location: 'Mbale',
+          photoUrl: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fclose-up-happy-brunette-girl-white-t-shirt-laughing-smiling-carefree-camera_1258-19129.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fsmiling-woman&tbnid=jMfDYODGEri82M&vet=12ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg..i&docid=PakbRk4DYhwL8M&w=626&h=417&q=smiling%20woman&client=opera&ved=2ahUKEwic2YCtl679AhXSricCHeP0C-4QMygOegUIARCMAg',
+        ),
       ] ,
+
         //recently add job titles
      ),
     );
