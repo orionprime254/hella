@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:hella/homepage.dart';
 import 'package:hella/loginpage.dart';
+import 'package:hella/main_page.dart';
 import 'package:hella/profile.dart';
-
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -15,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: MainPage(),
 
     );}}
  

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "174532876748",
+    "project_id": "hella-5e7ba",
+    "storage_bucket": "hella-5e7ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174532876748:android:12c64821d674aab038e569",
+        "android_client_info": {
+          "package_name": "com.example.hella"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174532876748-19eb3dc65s4q7u5fq5jhm3p0qka310sl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw2mpA8U9aXZfu6WFk6hD_QnXExqU0H84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174532876748-19eb3dc65s4q7u5fq5jhm3p0qka310sl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "174532876748-16nlcvn6aceg60q7spcvaihr2tn31fg8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hella"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
