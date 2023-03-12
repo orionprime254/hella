@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hella/advertisepage.dart';
 import 'package:hella/homepage.dart';
 import 'package:hella/loginpage.dart';
 import 'package:hella/main_page.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
+      home: AdvertPage(),
 
     );}}
  

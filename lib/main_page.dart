@@ -5,22 +5,20 @@ import 'package:hella/homepage.dart';
 import 'package:hella/loginpage.dart';
 
 class MainPage extends StatelessWidget {
-  const MainPage({Key? key}):super(key:key);
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: StreamBuilder<User?>(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (context, snapshot) {
-          if(snapshot.hasData){
-            return HomePage();
-            }
-            else {
-              return AuthPage();
-            }
-        },
-      )
-    );
+        body: StreamBuilder<User?>(
+      stream: FirebaseAuth.instance.authStateChanges(),
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return HomePage();
+        } else {
+          return AuthPage();
+        }
+      },
+    ));
   }
 }
