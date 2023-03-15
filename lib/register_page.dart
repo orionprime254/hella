@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class RegisterPage extends StatefulWidget {
   final VoidCallback showLoginPage;
@@ -23,6 +24,8 @@ class _RegisterPageState extends State<RegisterPage> {
   final _lastNameController = TextEditingController();
   final _phoneNumberController = TextEditingController();
 
+  final DatabaseReference database = FirebaseDatabase.instance.reference();
+
   @override
   void dispose() {
     _emailController.dispose();
@@ -36,29 +39,40 @@ class _RegisterPageState extends State<RegisterPage> {
     super.dispose();
   }
 
+//get data from text controllers and store them in firebase
   Future signUp() async {
     if (passwordConfirmed()) {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: _emailController.text.trim(),
           password: _passwordController.text.trim());
       // add user details
-      addUserDetails(_firstNameController.text.trim(),
+      addUserDetails(
+        _firstNameController.text.trim(),
         _lastNameController.text.trim(),
-        int.parse(        _phoneNumberController.text.trim(),
+        int.parse(
+          _phoneNumberController.text.trim(),
         ),
         _emailController.text.trim(),
-        );
-
+      );
     }
   }
-  Future addUserDetails(String firstName,String lastName,int phoneNumber,String email,) async{
+
+  Future addUserDetails(
+    String firstName,
+    String lastName,
+    int phoneNumber,
+    String email,
+  ) async {
     await FirebaseFirestore.instance.collection('users').add({
       'first name': firstName,
       'last name': lastName,
       'phone number': phoneNumber,
       'email': email,
     });
+    print('user details saved to firebase');
   }
+
+  final databaseReference = FirebaseDatabase.instance.reference();
 
   bool passwordConfirmed() {
     if (_passwordController.text.trim() ==

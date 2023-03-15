@@ -35,7 +35,7 @@ class _AdvertPageState extends State<AdvertPage> {
             child: Column(
               children: [
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
@@ -63,43 +63,42 @@ class _AdvertPageState extends State<AdvertPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 30,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: TextField(
-
-
                     decoration: InputDecoration(
                         border: InputBorder.none, hintText: 'Title'),
                   ),
-
                 ),
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 30,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: TextField(
-
-
                     decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Region'),
+                        border: InputBorder.none, hintText: 'Location'),
                   ),
                 ),
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 30,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: TextField(
-
-
                     decoration: InputDecoration(
                         border: InputBorder.none, hintText: 'Company Name'),
                   ),
                 ),
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 30,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: TextField(
-
-
                     decoration: InputDecoration(
                         border: InputBorder.none, hintText: 'Description'),
                   ),
@@ -107,7 +106,6 @@ class _AdvertPageState extends State<AdvertPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: GestureDetector(
-
                     child: Container(
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
@@ -125,9 +123,6 @@ class _AdvertPageState extends State<AdvertPage> {
                     ),
                   ),
                 ),
-
-
-
               ],
             ),
           ),
