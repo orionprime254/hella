@@ -3,10 +3,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hella/advertisepage.dart';
-import 'package:hella/carpenters.dart';
+import 'package:hella/collection_of_techs/carpenters.dart';
+
 import 'package:hella/custom%20widgets/buttons.dart';
 import 'package:hella/profile.dart';
-import 'package:hella/profile_page.dart';
 import 'package:hella/register_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,6 +26,7 @@ class _HomePageState extends State<HomePage> {
     AdvertPage(),
     ProfilePage(),
   ];
+
   void _onItemTapped(int index) {
     setState(() {
       _currentIndex = index;
@@ -75,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ProfileScreen()),
+                    MaterialPageRoute(builder: (context) => ProfilePage()),
                   );
                 },
               ),
@@ -112,7 +113,7 @@ class _HomePageState extends State<HomePage> {
             child: Card(
               elevation: 5,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(13)),
+                  borderRadius: BorderRadius.circular(18)),
               color: Colors.deepPurple[100],
               child: Row(
                 children: [

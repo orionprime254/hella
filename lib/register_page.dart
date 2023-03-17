@@ -123,53 +123,15 @@ class _RegisterPageState extends State<RegisterPage> {
                       child: TextField(
                         controller: _firstNameController,
                         decoration: InputDecoration(
-                            border: InputBorder.none, hintText: 'First Name'),
+                            border: InputBorder.none, hintText: 'Full Names'),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
-                      child: TextField(
-                        controller: _lastNameController,
-                        decoration: InputDecoration(
-                            border: InputBorder.none, hintText: 'Last Name'),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
-                      child: TextField(
-                        controller: _phoneNumberController,
-                        decoration: InputDecoration(
-                            border: InputBorder.none, hintText: 'Phone Number'),
-                      ),
-                    ),
-                  ),
-                ),
+
+
+
+
                 SizedBox(
                   height: 10,
                 ),

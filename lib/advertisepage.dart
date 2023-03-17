@@ -1,3 +1,6 @@
+import 'dart:html';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class AdvertPage extends StatefulWidget {
@@ -8,6 +11,8 @@ class AdvertPage extends StatefulWidget {
 }
 
 class _AdvertPageState extends State<AdvertPage> {
+  final CollectionReference _teknicians =
+  FirebaseFirestore.instance.collection('teknicians');
   _AdvertPageState() {
     _selectedVal = _categories[0];
   }
@@ -30,12 +35,12 @@ class _AdvertPageState extends State<AdvertPage> {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       body: SafeArea(
-        child: Center(
+
           child: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(
-                  height: 10,
+                  height: 30,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
@@ -43,7 +48,7 @@ class _AdvertPageState extends State<AdvertPage> {
                     value: _selectedVal,
                     items: _categories.map((e) {
                       return DropdownMenuItem(
-                        child: Text(e),
+                        child: Center(child: Text(e)),
                         value: e,
                       );
                     }).toList(),
@@ -63,50 +68,50 @@ class _AdvertPageState extends State<AdvertPage> {
                     ),
                   ),
                 ),
+
+                SizedBox(
+                  height: 30,
+                ),
+                //add images
+
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: Container(
+                    child: TextField(
+                      decoration: InputDecoration(
+                          border: InputBorder.none, hintText: 'Location'),
+                    ),
+                  ),
+                ),
+
+
                 SizedBox(
                   height: 30,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Title'),
+                  padding: const EdgeInsets.all( 20.0),
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Colors.deepPurple[100],
+                    ),
+                    height: 150,
+                    child: TextField(
+                      maxLength: 150,
+                      maxLines: 80,
+                      decoration: InputDecoration(
+                          border: InputBorder.none, hintText: 'Description'),
+                    ),
                   ),
                 ),
-                SizedBox(
-                  height: 30,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Location'),
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Company Name'),
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Description'),
-                  ),
-                ),
+                SizedBox(height: 100,),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: GestureDetector(
+                    onTap: ()=> _update(documentSnapshot),
                     child: Container(
+                      width: 200,
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                           color: Colors.deepPurple,
@@ -127,7 +132,7 @@ class _AdvertPageState extends State<AdvertPage> {
             ),
           ),
         ),
-      ),
+
     );
     DropdownMenuItem<String> buildMenuItem(String item) => DropdownMenuItem(
           value: item,
