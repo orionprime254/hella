@@ -1,4 +1,4 @@
-import 'dart:html';
+
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +11,8 @@ class AdvertPage extends StatefulWidget {
 }
 
 class _AdvertPageState extends State<AdvertPage> {
-  final CollectionReference _teknicians =
-  FirebaseFirestore.instance.collection('teknicians');
+  final CollectionReference _profilepage =
+  FirebaseFirestore.instance.collection('profilepage');
   _AdvertPageState() {
     _selectedVal = _categories[0];
   }
@@ -46,15 +46,15 @@ class _AdvertPageState extends State<AdvertPage> {
                   padding: const EdgeInsets.only(left: 20.0),
                   child: DropdownButtonFormField(
                     value: _selectedVal,
-                    items: _categories.map((e) {
+                    items: _categories.map((option) {
                       return DropdownMenuItem(
-                        child: Center(child: Text(e)),
-                        value: e,
+                        child: Center(child: Text(option)),
+                        value: option,
                       );
                     }).toList(),
-                    onChanged: (val) {
+                    onChanged: (newValue) {
                       setState(() {
-                        _selectedVal = val as String;
+                        _selectedVal = newValue as String;
                       });
                     },
                     icon: const Icon(
@@ -109,7 +109,9 @@ class _AdvertPageState extends State<AdvertPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: GestureDetector(
-                    onTap: ()=> _update(documentSnapshot),
+                    onTap: ()async{
+                      await _profilepage.doc('occupation').update({'occupation': _selectedVal});
+                    },
                     child: Container(
                       width: 200,
                       padding: EdgeInsets.all(20),
