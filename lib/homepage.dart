@@ -6,6 +6,7 @@ import 'package:hella/advertisepage.dart';
 import 'package:hella/carpenters.dart';
 import 'package:hella/custom%20widgets/buttons.dart';
 import 'package:hella/profile.dart';
+import 'package:hella/profile_page.dart';
 import 'package:hella/register_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -74,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()),
+                    MaterialPageRoute(builder: (context) => ProfileScreen()),
                   );
                 },
               ),
@@ -110,31 +111,31 @@ class _HomePageState extends State<HomePage> {
             },
             child: Card(
               elevation: 5,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(13)),
               color: Colors.deepPurple[100],
-              
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'lib/asseT/carpenter.png',
-                      width: 100,
-                      height: 80,
-                    ),
-                    Expanded(
-                        child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Center(
-                        child: Text(
-                          'Carpenter',
-                          style: TextStyle(
-                              fontSize: 24, fontWeight: FontWeight.w400),
-                        ),
+              child: Row(
+                children: [
+                  Image.asset(
+                    'lib/asseT/carpenter.png',
+                    width: 100,
+                    height: 80,
+                  ),
+                  Expanded(
+                      child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(
+                      child: Text(
+                        'Carpenter',
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.w400),
                       ),
-                    )),
-                  ],
-                ),
+                    ),
+                  )),
+                ],
               ),
             ),
+          ),
 
           Card(
             child: Container(

@@ -10,7 +10,12 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfileScreen()),
+            );
+          },
           icon: const Icon(LineAwesomeIcons.angle_left),
         ),
         title: Text(
