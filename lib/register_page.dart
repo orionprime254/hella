@@ -25,6 +25,17 @@ class _RegisterPageState extends State<RegisterPage> {
   final _phoneNumberController = TextEditingController();
 
   final DatabaseReference database = FirebaseDatabase.instance.reference();
+  final usersCollectionRef = FirebaseFirestore.instance.collection('profilepage');
+  Future<void> createUser(String name, String email) async {
+    // Create a new document with an automatically generated ID
+    final userDocRef = usersCollectionRef.doc();
+
+    // Set the data for the new document
+    await userDocRef.set({
+      'name': name,
+      'email': email,
+    });
+  }
 
   @override
   void dispose() {
@@ -57,6 +68,7 @@ class _RegisterPageState extends State<RegisterPage> {
     }
   }
 
+
   Future addUserDetails(
     String firstName,
     String lastName,
@@ -71,6 +83,7 @@ class _RegisterPageState extends State<RegisterPage> {
     });
     print('user details saved to firebase');
   }
+
 
   final databaseReference = FirebaseDatabase.instance.reference();
 

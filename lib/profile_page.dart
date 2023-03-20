@@ -3,12 +3,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hella/updateprofilescreen.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class ProfileScreen extends StatelessWidget {
   ProfileScreen({super.key});
 
+
   final CollectionReference _profilepage =
       FirebaseFirestore.instance.collection('profilepage');
+
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +19,7 @@ class ProfileScreen extends StatelessWidget {
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ProfileScreen()),
-              );
+
             },
             icon: const Icon(LineAwesomeIcons.angle_left),
           ),
@@ -56,7 +56,7 @@ class ProfileScreen extends StatelessWidget {
                           Text(
                             documentsnapshot['name'],
                           ),
-                          Text('Warhammer@gmail.com'),
+                          Text(FirebaseAuth.instance.currentUser.email),
                           SizedBox(
                             height: 20,
                           ),
